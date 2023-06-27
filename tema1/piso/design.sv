@@ -1,0 +1,63 @@
+// Code your design here
+// Code your design here
+
+//PIPO
+
+
+module bistabil_D(input a,input clk,output reg O);
+ 
+  always @(posedge clk)
+    begin
+      O<=a;
+    end
+endmodule
+
+/*
+module registru(input[3:0] a,input clk, output [3:0] out);
+  
+  bistabil_D b1(a,clk,out);
+  bistabil_D b2(a[2],clk,out[2]);
+  bistabil_D b3(a[1],clk,out[1]);
+  bistabil_D b4(a[0],clk,out[0]);
+endmodule
+*/
+module registru2(input[3:0] a,input pl,input clk, output  out);
+  /*
+  wire out1,out2,out3,out4;
+  
+ 
+	assign out1=a[3];
+      assign out2=a[2];
+      assign out3=a[1];
+      assign out4=a[0];
+     bistabil_D b1(out1,clk,out2);
+  bistabil_D b2(out2,clk,out3);
+  bistabil_D b3(out3,clk,out4);
+  bistabil_D b4(out4,clk,out);
+    */
+  reg temp1,temp2,temp3,temp4;
+  always @(*)
+    begin
+      if(pl)
+        begin
+          out<=a[0];
+          temp1<=a[3];
+          temp2=a[2]
+          temp3=a[1];
+          temp4=a[0];
+        end
+     
+      else
+        begin
+          temp1<=1'bx;
+          temp2<=temp1
+          temp3<=temp2;
+          temp4<=temp3;
+          out=temp4;
+        end
+    end
+  
+
+   
+ 
+endmodule
