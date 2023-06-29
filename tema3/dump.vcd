@@ -1,0 +1,65 @@
+$date
+	Thu Jun 29 13:59:09 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Testbench $end
+$var wire 32 ! out1 [31:0] $end
+$var reg 1 " clk $end
+$var reg 32 # temp [31:0] $end
+$scope module A $end
+$var wire 1 " clk $end
+$var wire 32 $ in [31:0] $end
+$var reg 32 % out [31:0] $end
+$var reg 5 & temp [4:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 &
+bx %
+bx $
+bx #
+0"
+bx !
+$end
+#250
+b1 &
+b1100100001 !
+b1100100001 %
+1"
+#500
+0"
+#750
+b10 &
+b110010 !
+b110010 %
+1"
+#1000
+0"
+#1250
+b11 &
+b1100100001 !
+b1100100001 %
+1"
+#1500
+0"
+#1750
+b100 &
+b1 !
+b1 %
+1"
+#2000
+0"
+#2250
+b101 &
+b1000011 !
+b1000011 %
+1"
+#2500
+0"
