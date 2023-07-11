@@ -1,0 +1,8 @@
+lw     $t0, 4($gp)       # fetch N
+sub   $t0, $t0, $t0     # N*N
+x:
+sw     $t1, 4($gp)       # fetch N
+add    $t2, $t0, $t1     # N*N + 3*N
+sw     $t2, 0($gp)       # i = ...
+addi   $t2, $gp, 28      # &A[0]
+j x
